@@ -1,0 +1,30 @@
+<div class="col-lg-5 col-sm-7 col-xs-12">
+
+	<button (click)="gotoEntry()" class="btn btn-info small-margin-bottom">
+		<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>&nbsp;
+		Enter new data
+	</button>
+
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<div class="panel-title">
+				{{listTitle()}}
+				{{listCount()}}
+
+				<button class="btn btn-info invisible">&nbsp;</button> <!-- Cheesy alignment fix -->
+				<button (click)="toggleFilter()" class="btn btn-info pull-right">
+					<span class="glyphicon {{buttonIcon()}}" aria-hidden="true"></span>&nbsp;
+					{{buttonText()}}
+				</button>
+			</div>
+		</div>
+
+		<div class="panel-body">
+			<div *ngFor="let entry of listData.entries" [ngClass]="getEntryClass(entry)">
+				{{entry.addr}}
+			</div>
+		</div>
+
+	</div>	<!-- Panel -->
+
+</div> <!-- Width limiter -->

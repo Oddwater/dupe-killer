@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<div class="panel-title">Random Address Generator</div>
+	</div>
+	<div class="panel-body">
+		<div class="">
+			<div class="narrow-input-group">
+				<input [(ngModel)]="unique" (change)="validateFields()" class="form-control narrow-input" />
+				<label>Unique Addresses</label>
+			</div>
+			<div class="narrow-input-group">
+				<input [(ngModel)]="dupes" (change)="validateFields()" class="form-control narrow-input" />
+				<label class="">Duplicates</label>
+			</div>
+		</div>
+
+		<button (click)="clearControls(true)" class="btn btn-info">
+			<span class="glyphicon glyphicon-ok-circle"></span>&nbsp;
+			Generate
+		</button>
+
+		<button (click)="clearControls(false)" class="btn btn-danger">
+			<span class="glyphicon glyphicon-remove-circle"></span>&nbsp;
+			Cancel
+		</button>
+	</div>
+</div>

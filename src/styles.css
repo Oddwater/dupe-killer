@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+.no-horiz-resize {
+	resize: vertical;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.nonexistent {
+	display: none;
+}
+
+.small-margin-bottom {
+	margin-bottom: 8px;
+}
+
+.narrow-input {
+	width: 80px;
+	display: inline;
+}
+
+.narrow-input-group {
+	margin-bottom: 8px;
+}
+
+/* Prevent panel over-runs */
+.panel-body {
+	overflow: hidden;
+}

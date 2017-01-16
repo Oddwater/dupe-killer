@@ -1,10 +1,32 @@
+//==================================================================================================
+// Top-level Component
+//==================================================================================================
 import { Component } from '@angular/core';
 
+//=================================================
+// Component Meta-Data
+//=================================================
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+	moduleId: module.id,
+	selector: 'app-root',
+
+	template: `
+		<div class="col-md-12">
+			<h2>{{title}}</h2>
+		</div>
+		<div>&nbsp;</div>
+		
+		<router-outlet></router-outlet>
+	`,
 })
-export class AppComponent {
-  title = 'app works!';
+
+//=================================================
+// Component Definition
+//=================================================
+export class AppComponent  { 
+
+	//--------------------------------------------------
+	// Vars
+	//--------------------------------------------------
+	title = 'Duplicate Entry Filter';
 }

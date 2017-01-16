@@ -1,0 +1,27 @@
+<div [hidden]="randomMode" class="col-lg-12">
+	<button (click)="clearEntries()"  class="btn btn-info">
+		<span class="glyphicon glyphicon-erase"></span>&nbsp;
+		Clear Entries
+	</button>
+
+	<button (click)="randomEntries()" class="btn btn-info">
+		<span class="glyphicon glyphicon-random"></span>&nbsp;
+		Generate Random Data
+	</button>
+
+	<button (click)="gotoResults()" [class.disabled]="!allowFilter()"  class="btn btn-primary">
+		<span class="glyphicon glyphicon-filter"></span>&nbsp;
+		FILTER LIST
+	</button>
+</div>
+
+<div [hidden]="!randomMode" class="col-lg-4 col-sm-6 col-xs-12">
+	<generate-random (closeComponent)="closeRandom($event)"></generate-random>
+</div>
+
+<div class="clearfix">&nbsp;</div>
+
+<div class="col-lg-4 col-sm-6 col-xs-12">
+	<h4>Email address list:</h4>
+	<textarea [(ngModel)]="entryListString" class="form-control no-horiz-resize" rows="10" placeholder="Type or paste email addresses here."></textarea>
+</div>
